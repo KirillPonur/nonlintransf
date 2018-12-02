@@ -1,0 +1,85 @@
+% Класс документа пока не окончательный, сильно сомневаюсь, что article 		
+\documentclass[a4paper,12pt]{extarticle} 
+% Подключаем шрифты,кодировки,русские переносы
+\usepackage{cmap}
+% подключается пакет, позволяющий улучшить вид пдф документа(как я понял)
+\usepackage[utf8x]{inputenc}
+% подключаем кодировку шрифтов для вносимых файлов
+\usepackage[T2A]{fontenc}
+% подключаем кодировку внутреннних шрифтов
+\usepackage[main=russian,english]{babel}
+% подключаем перенос и распознование слов, русский в приоритете
+\usepackage{indentfirst}
+% Отступ в начале абзаца
+% \usepackage[unicode=true,pdfusetitle,
+ 	% bookmarks=true,bookmarksnumbered=false,bookmarksopen=true,
+ 	% breaklinks=false,pdfborder={0 0 0},pdfborderstyle={},backref=slide,colorlinks=false]
+ 	% {hyperref}
+ % Надо разобраться с опциями, копирнул из пред.файла, который еще был написан в lyx
+\usepackage{subfig}
+% попытка загрузить minipage
+\usepackage{
+	amssymb,
+	amsfonts,
+	amsmath,
+}
+\usepackage{nicefrac}
+% Пакеты американского математ. сообщества, красивый вид формул и текста внутри, а также дробный вид формул
+\usepackage{esdiff}
+% Пакет для производных
+\usepackage{
+	wrapfig,
+	graphicx,
+	caption,
+	% subcaption,
+	tikz,
+}
+\captionsetup{format=plain,labelsep=period}
+% Обтекаемые объекты, рисунки, подписи без двоеточий и прочее
+\usepackage{
+	pgfplotstable,
+	pgfplots,
+	booktabs,
+	colortbl,
+	array,
+	% float
+}
+\pgfplotsset{compat=newest}
+% таблицы, графики
+\usepackage[final]{pdfpages}
+% Для вставки pdf файлов
+\usepackage{geometry}
+\usepackage{fancyhdr}
+% границы, контитулы, и прочее
+
+
+\geometry
+	{
+	left=1.5cm,
+	right=1.5cm,
+	bottom=2cm,
+	top=2cm,
+	}
+% границы документа
+
+\usepackage{setspace}
+% убирает гигантские размеры оглавления
+\linespread{1.3}
+% междустрочный интервал
+
+\pagestyle{fancy}
+\fancyhead{}
+% пустая шапка контитула
+\fancyhead[R]{\authors}
+% На правой стороне страницы авторы и науч.рук.
+\fancyhead[L]{\labname}
+ % Слева название лабы
+\fancyfoot{}
+\fancyfoot[C]{\thepage}
+% номер страницы снизу по середине
+\renewcommand{\contentsname}{Оглавление}
+% переводим на русский язык оглавление
+\usepackage{secdot}
+\sectiondot{subsection}
+% Ставит злосчастные точки в главах, ибо не по госту
+% Преамбула почти слизана у Федора Сарафанова https://github.com/FedorSarafanov/RLC/blob/master/text/diss.tex

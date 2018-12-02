@@ -1,0 +1,71 @@
+% Класс документа пока не окончательный, сильно сомневаюсь, что article лучший
+\documentclass[a4paper,12pt]{extarticle} 
+% Подключаем шрифты,кодировки,русские переносы
+\usepackage{cmap}
+% подключается пакет, позволяющий улучшить вид пдф документа(как я понял)
+\usepackage[utf8x]{inputenc}
+% подключаем кодировку шрифтов для вносимых файлов
+\usepackage[T2A]{fontenc}
+% подключаем кодировку внутреннних шрифтов
+\usepackage[russian,english]{babel}
+% подключаем перенос и распознование слов, русский в приоритете
+\usepackage{indentfirst}
+% Отступ в начале абзаца
+\usepackage{
+	amssymb,
+	amsfonts,
+	amsmath,
+}
+% Пакеты американского математ. сообщества, красивый вид формул и текста внутри
+\usepackage{
+	wrapfig,
+	graphicx,
+	caption,
+	subcaption,
+	tikz,
+}
+% Обтекаемые объекты, рисунки, подписи и прочее
+\usepackage{
+	pgfplotstable,
+	pgfplots,
+	booktabs,
+	colortbl,
+	array
+}
+\pgfplotsset{compat=newest}
+% таблицы, графики
+\usepackage{geometry}
+\usepackage{fancyhdr}
+% границы, контитулы, и прочее
+
+
+\geometry
+	{
+	left=2.2cm,
+	right=2.2cm,
+	bottom=2cm,
+	top=2cm,
+	}
+% границы документа
+
+\usepackage{setspace}
+% убирает гигантские размеры оглавления
+\linespread{1.3}
+% междустрочный интервал
+
+\pagestyle{fancy}
+\fancyhead{}
+% пустая шапка контитула
+\fancyhead[R]{\authors}
+% На правой стороне страницы авторы и науч.рук.
+\fancyhead[L]{\labname}
+ % Слева название лабы
+\fancyfoot{}
+\fancyfoot[C]{\thepage}
+% номер страницы снизу по середине
+\renewcommand{\contentsname}{Оглавление}
+% переводим на русский язык оглавление
+\usepackage{secdot}
+\sectiondot{subsection}
+% Ставит злосчастные точки в главах, ибо не по госту
+% Преамбула почти слизана у Федора Сарафанова https://github.com/FedorSarafanov/RLC/blob/master/text/diss.tex
