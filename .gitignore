@@ -1,0 +1,17 @@
+*.pyc
+
+*.aux
+
+*.fdb_latexmk
+
+*.fls
+
+*.out
+
+*.log
+
+filters\.synctex\.gz
+
+*.toc
+
+*.gz
